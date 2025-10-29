@@ -30,6 +30,9 @@ Given a code snippet, predict whether it is:
 | (iii) Seen Languages & Unseen Domains| C++, Python, Java       | Research, Production   |
 | (iv) Unseen Languages & Domains      | Go, PHP, C#, C, JS      | Research, Production   |
 
+**Dataset Size**: 
+- Train - 500K samples (238K Human-Written | 262K Machine-Generated)
+- Validation - 100K samples
 ---
 
 ###  Subtask B: Multi-Class Authorship Detection
@@ -46,6 +49,9 @@ Given a code snippet, predict its author:
 - **Seen authors**: Test-time generators appeared in training  
 - **Unseen authors**: Test-time generators are new but from known model families
 
+**Dataset Size**: 
+- Train - 500K samples (442K Human |4K DeepSeek-AI | 8K Qwen| 3K 01-ai |2 K BigCode |2K Gemma | 5K Phi | 8K Meta-LLaMA |8K IBM-Granite| 4K  Mistral   |10K OpenAI)
+- Validation - 100K samples
 ---
 
 ### Subtask C: Hybrid Code Detection
@@ -57,6 +63,10 @@ Classify each code snippet as one of:
 2. **Machine-generated**  
 3. **Hybrid** — partially written or completed by LLM  
 4. **Adversarial** — generated via adversarial prompts or RLHF to mimic humans
+
+**Dataset Size**: 
+- Train - 900K samples (485K Human-written | 210K Machine-generated |  85K Hybrid | 118K Adversarial)
+- Validation - 200K samples
 ---
 
 ## 📁 Data Format
@@ -102,7 +112,7 @@ You can submit your system outputs using the following links:
 * [Task C](https://www.kaggle.com/t/005ab8234f27424aa096b7c00a073722)
 
 At the moment, only the **public test set** is available. The leaderboard shown now is for convenience only - it reflects results on the **public test set**.
-We will release the **private test set later**, which will be used for the **final evaluation and ranking**.
+We will release the **private test set on Jan. 10**, which will be used for the **final evaluation and ranking**.
 
 Please make sure to **resubmit** your final predictions once the private test set is released, as only those submissions will be considered for the official evaluation. We will inform all participants when the private test data becomes available.
 
@@ -120,11 +130,15 @@ You are free to participate in one, two, or all three tasks—it’s completely 
 
 We aim to align all key dates with the official SemEval committee schedule and will announce them accordingly.
 
-## Preliminary Important Dates
-- Sample data ready: 15 July 2025
-- Training data ready: **1 September 2025**
-- Evaluation data ready: 1 December 2025 
-- Evaluation data ready and evaluation start: 10 January 2026
+> **Q4: What methods and technologies can I use?**
+
+Be creative! The only restriction is that we **do not allow** the usage of AI-generated content detectors, trained by third parties and restrict the data usage to the provided training sets. Other than that, feel free to use any methods and technologies you prefer.
+
+## Important Dates
+- ~~Sample data ready: 15 July 2025~~
+- ~~Training data ready: **1 September 2025**~~
+- **Evaluation data ready: 1 December 2025** (we already released the training and validation datasets) 
+- Evaluation data ready and evaluation start: 10 January 2026 (we will share private test data at this time)
 - Evaluation end: 24 January 2026
 - Paper submission due: February 2026
 - Notification to authors: March 2026
